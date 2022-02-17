@@ -1,3 +1,42 @@
+expat (2.2.9-1ubuntu0.2) focal-security; urgency=medium
+
+  * SECURITY UPDATE: Realloc misbehavior
+    - debian/patches/CVE-2021-45960.patch: detect and prevent troublesome
+      left shifts in function storeAtts in expat/lib/xmlparse.c.
+    - CVE-2021-45960
+  * SECURITY UPDATE: Integer overflow
+    - debian/patches/CVE-2021-46143.patch: prevent integer overflow
+      on m_groupSize in function doProlog in expat/lib/xmlparse.c.
+    - CVE-2021-46143
+  * SECURITY UPDATE: Integer overflow
+    - debian/patches/CVE-2022-22822-to-CVE-2022-22827.patch: prevent integer overflow
+      in multiple places in expat/lib/xmlparse.c.
+    - CVE-2022-22822
+    - CVE-2022-22823
+    - CVE-2022-22824
+    - CVE-2022-22825
+    - CVE-2022-22826
+    - CVE-2022-22827
+  * SECURITY UPDATE: Signed integer overflow
+    - debian/patches/CVE-2022-23852-*.patch: detect and prevent
+      integer overflow in XML_GetBuffer in expat/lib/xmlparse.c and
+      adds test to cover it in expat/tests/runtests.c.
+    - CVE-2022-23852
+  * SECURITY UPDATE: Integer overflow
+    - debian/patches/CVE-2022-23990.patch: prevent integer overflow in
+      doProlog in expat/lib/xmlparse.c.
+    - CVE-2022-23990
+  * SECURITY UPDATE: Incomplete validation encoding
+    - debian/patches/CVE-2022-25235-*.patch: adds missing validation
+      and adds tests in expat/lib/xmltok_impl.c, expat/tests/runtests.c.
+    - CVE-2022-25235
+  * SECURITY UPDATE: Namespace-separator insertions
+    - debian/patches/CVE-2022-25236-*.patch: Protect against malicious
+      namespace declarations in expat/lib/xmlparse.c, expat/tests/runtests.c.
+    - CVE-2022-25236
+
+ -- Leonidas Da Silva Barbosa <leo.barbosa@canonical.com>  Thu, 17 Feb 2022 20:09:12 -0300
+
 expat (2.2.9-1build1) focal; urgency=medium
 
   * No-change rebuild for libgcc-s1 package name change.
