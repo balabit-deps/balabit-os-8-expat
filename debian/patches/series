@@ -8,3 +8,13 @@ CVE-2022-25235-1.patch
 CVE-2022-25235-2.patch
 CVE-2022-25236-1.patch
 CVE-2022-25236-2.patch
+CVE-2022-25313.patch
+fix-build_model-regression.patch
+protect-against-nested-element-declaration-model-regressions.patch
+CVE-2022-25314.patch
+CVE-2022-25315.patch
+CVE-2022-25236-3.patch
+CVE-2022-25236-4.patch
+CVE-2022-25236-5.patch
+CVE-2022-25236-6.patch
+fix_test_dup.patch

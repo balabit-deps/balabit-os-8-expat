@@ -1,3 +1,35 @@
+expat (2.2.9-1ubuntu0.4) focal-security; urgency=medium
+
+  * SECURITY UPDATE: Stack exhaustion
+    - debian/patches/CVE-2022-25313.patch: prevent
+      stack exhaustion in build_model in expat/lib/xmlparse.c.
+    - debian/patches/fix-build_model-regression.patch: fix build_model
+      regression in expat/lib/xmlparse.c.
+    - debian/patches/protect-against-nested-element*: in expat/lib/xmlparse.
+    - CVE-2022-25313
+  * SECURITY UPDATE: Integer overflow
+    - debian/patches/CVE-2022-25314.patch: prevent integer overflow in
+      copyString in expat/lib/xmlparse.c.
+    - CVE-2022-25314
+  * SECURITY UPDATE: Integer overflow
+    - debian/patches/CVE-2022-25315.patch: prevent integer overflow in
+      storeRawNames in expat/lib/xmlparse.c.
+    - CVE-2022-25315
+  * SECURITY UPDATE: relax fix to CVE-2022-25236 with regard to
+    RFC 3986 URI characters and possibly regressions
+    - debian/patches/CVE-2022-25236-3.patch: add a note on namespace URI
+      validation in expat/doc/reference.html, expat/lib/expat.h.
+    - debian/patches/CVE-2022-25236-4.patch: document namespace separator
+      effect right in header expat/lib/expat.h.
+    - debian/patches/CVE-2022-25236-5.patch: cover relaxed fix in tests.
+    - debian/patches/CVE-2022-25236-6.patch: relax fix with regard to
+      RFC 3986 URI characters in expat/lib/xmlparse.c. (LP: #1963903)
+  * removing duplicated tests
+    - debian/patches/fix_test_dup.patch: removing tests were duplicated in
+      expat/tests/runtests.c.
+
+ -- Leonidas Da Silva Barbosa <leo.barbosa@canonical.com>  Mon, 21 Feb 2022 15:48:46 -0300
+
 expat (2.2.9-1ubuntu0.2) focal-security; urgency=medium
 
   * SECURITY UPDATE: Realloc misbehavior
