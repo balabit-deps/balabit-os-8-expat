@@ -18,3 +18,4 @@ CVE-2022-25236-4.patch
 CVE-2022-25236-5.patch
 CVE-2022-25236-6.patch
 fix_test_dup.patch
+CVE-2022-40674.patch

@@ -1,3 +1,13 @@
+expat (2.2.9-1ubuntu0.5) focal-security; urgency=medium
+
+  * SECURITY UPDATE: Use-after-free in doContent
+    - debian/patches/CVE-2022-40674.patch: ensure storeRawNames()
+      is always called in func internalEntityProcessor if handling
+      unbalanced tags in expat/lib/xmlparse.c.
+    - CVE-2022-40674
+
+ -- David Fernandez Gonzalez <david.fernandezgonzalez@canonical.com>  Tue, 15 Nov 2022 16:11:03 +0100
+
 expat (2.2.9-1ubuntu0.4) focal-security; urgency=medium
 
   * SECURITY UPDATE: Stack exhaustion
