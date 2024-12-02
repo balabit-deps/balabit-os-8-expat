@@ -1,3 +1,16 @@
+expat (2.2.9-1ubuntu0.8) focal-security; urgency=medium
+
+  * SECURITY UPDATE: denial-of-service via XML_ResumeParser
+    - debian/patches/CVE-2024-50602-1.patch: Make function XML_StopParser of
+      expat/lib/xmlparse.c refuse to stop/suspend an unstarted parser
+    - debian/patches/CVE-2024-50602-2.patch: Add XML_PARSING case to parser
+      state in function XML_StopParser of expat/lib/xmlparse.c
+    - debian/patches/CVE-2024-50602-3.patch: Add tests for CVE-2024-50602 to
+      expat/tests/runtests.c
+    - CVE-2024-50602 
+
+ -- Nicolas Campuzano Jimenez <nicolas.campuzano@canonical.com>  Sun, 01 Dec 2024 22:26:34 -0500
+
 expat (2.2.9-1ubuntu0.7) focal-security; urgency=medium
 
   * SECURITY UPDATE: invalid input length
